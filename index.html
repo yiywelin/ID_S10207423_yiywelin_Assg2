@@ -23,7 +23,7 @@
       <span class="navbar-toggler-icon" wfd-id="472"></span>
     </button>
   
-    <div class="navbar-collapse collapse" id="navbarColor01" wfd-id="462" style="">
+    <div class="navbar-collapse collapse" id="navbarColor01" wfd-id="462">
       <ul class="navbar-nav mr-auto" wfd-id="464">
         <li class="nav-item active" wfd-id="470">
           <a class="nav-link" href="index.html">Home
@@ -38,7 +38,7 @@
         </li>
         <li class="nav-item dropdown" wfd-id="647">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="learning.html" role="button" aria-haspopup="true" aria-expanded="false">Learning Zone</a>
-          <div class="dropdown-menu" wfd-id="648">
+          <div class="dropdown-menu" style="background-color: #b58900;" wfd-id="648">
             <a class="dropdown-item" href="learnWeather.html" style="color: white;">Weather</a>
             <a class="dropdown-item" href="learnDisaster.html" style="color: white;">Natural Disasters</a>
             <div class="dropdown-divider"></div>
@@ -80,11 +80,17 @@
 
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="submit" class="signupbtn" onclick="popupMessage()">Sign Up</button>
       </div>
     </div>
   </form>
 </div>
+
+<script>
+  function popupMessage() {
+    alert("You've successfully sign up! Thank You!");
+  }
+  </script>
 
       <h2 class="welcomeText">Welcome To</h2>
       <h1 class="welcomeText">Weathy</h1>
@@ -128,5 +134,33 @@
 <footer class="mt-5 p-3 text-center bg-light">
     Weathy &copy;
 </footer>
+
+<footer class="mt-5 p-3 text-center bg-light">
+  Weathy &copy;
+</footer>
+
+<button onclick="topFunction()" id="myTopBtn" title="Go to top">Back to Top</button>
+
+<script>
+  //Get the button
+  var mybutton = document.getElementById("myTopBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
 </body>
 </html>

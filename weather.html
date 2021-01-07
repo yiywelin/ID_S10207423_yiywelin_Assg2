@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
   </head>
@@ -22,7 +23,7 @@
           <span class="navbar-toggler-icon" wfd-id="472"></span>
         </button>
       
-        <div class="navbar-collapse collapse" id="navbarColor01" wfd-id="462" style="">
+        <div class="navbar-collapse collapse" id="navbarColor01" wfd-id="462">
           <ul class="navbar-nav mr-auto" wfd-id="464">
             <li class="nav-item" wfd-id="470">
               <a class="nav-link" href="index.html">Home
@@ -36,12 +37,12 @@
             <li class="nav-item" wfd-id="468">
               <a class="nav-link" href="map.html">Map</a>
             </li>
-            <li class="nav-item dropdown" wfd-id="647">
+            <li class="nav-item dropdown" style="background-color: #b58900;" wfd-id="647">
               <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="learning.html" role="button" aria-haspopup="true" aria-expanded="false">Learning Zone</a>
               <div class="dropdown-menu" wfd-id="648">
                 <a class="dropdown-item" href="learnWeather.html" style="color: white;">Weather</a>
                 <a class="dropdown-item" href="learnDisaster.html" style="color: white;">Natural Disasters</a>
-                <div class="dropdown-divider"></div>
+                <div class="dropdown-divider"></div>c
                 <a class="dropdown-item" href="https://www.ducksters.com/science/environment/" target="_blank" style="color: white;">More content</a>
               </div>
             </li>
@@ -69,6 +70,34 @@
         <footer class="mt-5 p-3 text-center bg-light">
              Weathy &copy;
         </footer>
+
+        <footer class="mt-5 p-3 text-center bg-light">
+          Weathy &copy;
+        </footer>
+        
+        <button onclick="topFunction()" id="myTopBtn" title="Go to top">Back to Top</button>
+        
+        <script>
+          //Get the button
+          var mybutton = document.getElementById("myTopBtn");
+          
+          // When the user scrolls down 20px from the top of the document, show the button
+          window.onscroll = function() {scrollFunction()};
+          
+          function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+              mybutton.style.display = "block";
+            } else {
+              mybutton.style.display = "none";
+            }
+          }
+          
+          // When the user clicks on the button, scroll to the top of the document
+          function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+          }
+          </script>
   </body>
   <script src="fetch.js"></script>
   <script src="ui.js"></script>
